@@ -7,9 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  #o que será feito nessa pipeline
+  # o que será feito nessa pipeline
   cypress-run:
-    #maquina que será executada
+  
+    # maquina que será executada
     runs-on: ubuntu-latest
 
     steps:

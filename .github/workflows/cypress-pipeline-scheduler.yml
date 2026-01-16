@@ -1,0 +1,32 @@
+name: Run Basic Tests
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [feature/run-pipeline]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: npm install
+        
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      - name: upload relatório
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Relatório
+          path: cypress/reports

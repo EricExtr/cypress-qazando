@@ -7,7 +7,11 @@ module.exports = defineConfig({
     reporterOptions: {
       charts: true,
       reportTitle: 'Projeto do curso Cypress',
-      reportPageTitle: 'Relatório de Testes'
+      reportPageTitle: 'Relatório de Testes',
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: true,
+      json: false
     },
     video: true,
     screenshotOnRunFailure: true,

@@ -1,10 +1,8 @@
-name: Run Basic Tests
+name: Run Basic Tests - Scheduler
 
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [feature/run-pipeline]
+  schedule:
+    - cron: '0 20 * * *'
 
 jobs:
   cypress-run:

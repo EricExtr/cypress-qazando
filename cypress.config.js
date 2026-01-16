@@ -9,6 +9,8 @@ module.exports = defineConfig({
       reportTitle: 'Projeto do curso Cypress',
       reportPageTitle: 'Relatório de Testes'
     },
+    video: true,
+    screenshotOnRunFailure: true,
     baseUrl: "https://automationpratice.com.br/",
     defaultCommandTimeout: 5000,
     setupNodeEvents(on, config) {

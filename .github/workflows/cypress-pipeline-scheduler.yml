@@ -30,7 +30,6 @@ jobs:
         with:
           name: Relatório
           path: |
-            cypress/reports
             cypress/videos
             cypress/screenshots
           if-no-files-found: warn
